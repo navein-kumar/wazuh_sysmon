@@ -1,456 +1,271 @@
 <!-- Modify it at your will. -->
-<!-- Modify it at your will. -->
-<!-- Rules 102101 - 102499: Direct Mapping from Sysmon Config File, Rule Level:3 -->
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
 <group name="windows,sysmon,">
-<rule id="102101" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1021,technique_name=Remote Services$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1021</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102102" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1569.002,technique_name=Service Execution$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1569</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102103" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1197,technique_name=BITS Jobs$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1197</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102104" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1021,technique_name=Remote Services$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1021</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102105" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1102,technique_name=Web Service$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1102</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102106" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1016,technique_name=System Network Configuration Discovery$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1016</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102107" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1057,technique_name=Process Discovery$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1057</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102108" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1049,technique_name=System Network Connections Discovery$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1049</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102109" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1033,technique_name=System Owner/User Discovery$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1033</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102110" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1134,technique_name=Access Token Manipulation$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1134</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102111" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1112,technique_name=Modify Registry$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1112</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102112" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1518.001,technique_name=Security Software Discovery$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1518</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102113" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1070,technique_name=Indicator Removal on Host$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1070</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102114" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1053,technique_name=Scheduled Task/Job$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1053</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102115" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1218.010,technique_name=Regsvr32$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1218</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102116" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1059.003,technique_name=Windows Command Shell$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1059</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102117" level="3">
-<if_sid>61605,92101,92102</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1059.001,technique_name=PowerShell$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1059</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102118" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1202,technique_name=Indirect Command Execution$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1202</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102119" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1218.005,technique_name=Mshta$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1218</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102120" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1069,technique_name=Permission Groups Discovery$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1069</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102121" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1018,technique_name=Remote System Discovery$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1018</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102122" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1543.003,technique_name=Windows Service$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1543</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102123" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1127</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102124" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1096,technique_name=NTFS File Attributes$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1096</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102125" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1105,technique_name=Ingress Tool Transfer$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1105</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102126" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1218,technique_name=Signed Binary Proxy Execution$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1218</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102127" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1003,technique_name=Credential Dumping$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1003</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102128" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1548.002,technique_name=Bypass User Access Control$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1548</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102129" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1053,technique_name=Scheduled Task$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1053</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102130" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1218,technique_name=Signed Script Proxy Execution$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1218</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102131" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1012,technique_name=Query Registry$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1012</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102132" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1218,technique_name=Regsvr32$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1218</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102133" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1218.011,technique_name=Rundll32$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1218</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102134" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1047,technique_name=Windows Management Instrumentation$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1047</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102135" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1218.009,technique_name=Regsvcs/Regasm$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1218</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102136" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1089,technique_name=Disabling Security Tools$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1089</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102137" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1569,technique_name=Commonly Used Port$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1569</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102138" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1036,technique_name=Masquerading$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1036</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
-<rule id="102139" level="3">
-<if_sid>61605</if_sid>
-<field name="win.eventdata.RuleName">^technique_id=T1021.006,technique_name=Windows Remote Management$</field>
-<description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-<mitre>
-<id>T1021</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event3,</group>
-</rule>
-<!-- Rules 102500 - 102599: Exceptions/Rule Level Mod -->
 
-<!-- Sysmon Event 3: Sysmon Anomalies -->
-<!-- Abnormal Destination Port Detected -->
-<rule id="102503" level="10">
-  <if_group>sysmon_event3</if_group>
-  <description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
-  <options>no_full_log</options>
-  <group>sysmon_event3,</group>
-</rule>
-<!-- Rules 102600 - 102699: Correlation Rules -->
-<!-- Abnormal Destination Port Detected -->
-
-</group>
-<group name="windows,sysmon,">
- <rule id="200070" level="2">
-    <field name="group">^SysmonConfigReload</field>
-    <description>Sysmon Rules Reloaded</description>
+  <rule id="61600" level="3" overwrite="yes">
+    <if_sid>60004</if_sid>
+    <field name="win.system.severityValue">^INFORMATION$</field>
+    <description>Windows Sysmon informational event</description>
     <options>no_full_log</options>
   </rule>
 
-	
+  <rule id="61601" level="3" overwrite="yes">
+    <if_sid>60004</if_sid>
+    <field name="win.system.severityValue">^WARNING$</field>
+    <description>Windows Sysmon warning event</description>
+    <options>no_full_log</options>
+    <group>gpg13_4.12,</group>
+  </rule>
+
+  <rule id="61603" level="1" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^1$</field>
+    <description>Sysmon - Event 1: Process creation</description>
+    <options>no_full_log</options>
+    <group>sysmon_event1,</group>
+  </rule>
+
+  <rule id="61604" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^2$</field>
+    <description>Sysmon - Event 2: A process changed a file creation time</description>
+    <options>no_full_log</options>
+    <group>sysmon_event2,</group>
+  </rule>
+
+  <rule id="61605" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^3$</field>
+    <description>Sysmon - Event 3: Network connection</description>
+    <options>no_full_log</options>
+    <group>sysmon_event3,</group>
+  </rule>
+
+  <rule id="61606" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^4$</field>
+    <description>Sysmon - Event 4: Sysmon service state changed</description>
+    <options>no_full_log</options>
+    <group>sysmon_event4,</group>
+  </rule>
+
+  <rule id="61607" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^5$</field>
+    <description>Sysmon - Event 5: Process terminated</description>
+    <options>no_full_log</options>
+    <group>sysmon_event5,</group>
+  </rule>
+
+  <rule id="61608" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^6$</field>
+    <description>Sysmon - Event 6: Driver loaded</description>
+    <options>no_full_log</options>
+    <group>sysmon_event6,</group>
+  </rule>
+
+  <rule id="61609" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^7$</field>
+    <description>Sysmon - Event 7: Image loaded</description>
+    <options>no_full_log</options>
+    <group>sysmon_event7,</group>
+  </rule>
+
+  <rule id="61610" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^8$</field>
+    <description>Sysmon - Event 8: CreateRemoteThread</description>
+    <options>no_full_log</options>
+    <group>sysmon_event8,</group>
+  </rule>
+
+  <rule id="61611" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^9$</field>
+    <description>Sysmon - Event 9: RawAccessRead</description>
+    <options>no_full_log</options>
+    <group>sysmon_event9,</group>
+  </rule>
+
+  <rule id="61612" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^10$</field>
+    <description>Sysmon - Event 10: ProcessAccess</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_10,</group>
+  </rule>
+
+  <rule id="61613" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^11$</field>
+    <description>Sysmon - Event 11: FileCreate</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_11,</group>
+  </rule>
+
+  <rule id="61614" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^12$</field>
+    <description>Sysmon - Event 12: RegistryEvent (Object create and delete)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_12,</group>
+  </rule>
+
+  <rule id="61615" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^13$</field>
+    <description>Sysmon - Event 13: RegistryEvent (Value Set)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_13,</group>
+  </rule>
+
+  <rule id="61616" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^14$</field>
+    <description>Sysmon - Event 14: RegistryEvent (Key and Value Rename)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_14,</group>
+  </rule>
+
+  <rule id="61617" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^15$</field>
+    <description>Sysmon - Event 15: FileCreateStreamHash</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_15,</group>
+  </rule>
+
+  <rule id="61644" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^16$</field>
+    <description>Sysmon - Event 16: ConfigEvent (Sysmon configuration changed)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_16,</group>
+  </rule>
+
+  <rule id="61645" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^17$</field>
+    <description>Sysmon - Event 17: PipeEvent (Pipe Created)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_17,</group>
+  </rule>
+
+  <rule id="61646" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^18$</field>
+    <description>Sysmon - Event 18: PipeEvent (Pipe Connected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_18,</group>
+  </rule>
+
+  <rule id="61647" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^19$</field>
+    <description>Sysmon - Event 19: WmiEvent (WmiEventFilter activity detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_19,</group>
+  </rule>
+
+  <rule id="61648" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^20$</field>
+    <description>Sysmon - Event 20: WmiEvent (WmiEventConsumer activity detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_20,</group>
+  </rule>
+
+  <rule id="61649" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^21$</field>
+    <description>Sysmon - Event ID 21: WmiEvent (WmiEventConsumerToFilter activity detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_21,</group>
+  </rule>
+
+  <rule id="61650" level="11" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^22$</field>
+    <description>Sysmon - Event ID 22: DNSEvent (DNS query)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_22,</group>
+  </rule>
+
+  <rule id="61651" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^23$</field>
+    <description>Sysmon - Event ID 23: FileDeleteArchivedEvent (File deletion detected and file archived)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_23,</group>
+  </rule>
+
+  <rule id="61652" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^24$</field>
+    <description>Sysmon - Event ID 24: ClipboardEvent (Clipboard change detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_24,</group>
+  </rule>
+
+  <rule id="61653" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^25$</field>
+    <description>Sysmon - Event ID 25: ProcessTampering (Process tampering detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_25,</group>
+  </rule>
+
+  <rule id="61654" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^26$</field>
+    <description>Sysmon - Event ID 26: FileDeleteEvent (File deletion detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_26,</group>
+  </rule>
+
+  <rule id="61655" level="3" overwrite="yes">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^255$</field>
+    <description>Sysmon - Event ID 255: ErrorEvent (Sysmon error)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_255,</group>
+  </rule>
+
+  <rule id="110020" level="3">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^27$</field>
+    <description>Sysmon - Event ID 27: FileBlockExecutableEvent (Blocking creation of an executatble file)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_27,</group>
+  </rule>
+
+  <rule id="110021" level="3">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^28$</field>
+    <description>Sysmon - Event ID 28: FileBlockShreddingEvent (Blocking shredding of a file)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_28,</group>
+  </rule>
+
+  <rule id="110022" level="3">
+    <if_sid>61600</if_sid>
+    <field name="win.system.eventID">^29$</field>
+    <description>Sysmon - Event ID 29: FileExecutableDetectedEvent (Creation of an executable file detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_29,</group>
+  </rule>
+
+
+  <rule id="110050" level="0">
+    <if_group>sysmon_event1</if_group>
+    <field name="win.system.message">ParentImage: -</field>
+    <description>Sysmon - Event 1: Process creation - No Parent</description>
+  </rule>
+
+  <rule id="110051" level="3">
+    <if_sid>110050</if_sid>
+    <description>Sysmon - Event 1: Process creation - No Parent</description>
+  </rule>
+
 </group>
