@@ -1,4 +1,3 @@
-<!-- Modify it at your will. -->
 <group name="windows,sysmon,">
 
   <rule id="61600" level="3" overwrite="yes">
@@ -16,7 +15,7 @@
     <group>gpg13_4.12,</group>
   </rule>
 
-  <rule id="61603" level="1" overwrite="yes">
+  <rule id="61603" level="3" overwrite="yes">
     <if_sid>61600</if_sid>
     <field name="win.system.eventID">^1$</field>
     <description>Sysmon - Event 1: Process creation</description>
@@ -184,7 +183,7 @@
     <group>sysmon_event_21,</group>
   </rule>
 
-  <rule id="61650" level="11" overwrite="yes">
+  <rule id="61650" level="3" overwrite="yes">
     <if_sid>61600</if_sid>
     <field name="win.system.eventID">^22$</field>
     <description>Sysmon - Event ID 22: DNSEvent (DNS query)</description>
