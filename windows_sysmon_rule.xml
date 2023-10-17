@@ -1,4 +1,5 @@
 <!-- Modify it at your will. -->
+<!-- Modify it at your will. -->
 <!-- Rules 102101 - 102499: Direct Mapping from Sysmon Config File, Rule Level:3 -->
 <!-- Sysmon - Event 3: Network connection by $(win.eventdata.image) -->
 <group name="windows,sysmon,">
@@ -431,19 +432,12 @@
 <group>sysmon_event3,</group>
 </rule>
 <!-- Rules 102500 - 102599: Exceptions/Rule Level Mod -->
-<!-- Frequency rule to capture 2 sysmon event 3 alerts within of the same destination ip within 5 seconds -->
-<rule frequency="2" id="102502" level="1" timeframe="60">
-		<if_matched_group>sysmon_event3</if_matched_group>
-		<same_field>win.eventdata.destinationIp</same_field>
-		<description>Multiple Sysmon Level 3 alerts for same destination IP.</description>
-		<options>no_full_log</options>
-	</rule>
+
 <!-- Sysmon Event 3: Sysmon Anomalies -->
 <!-- Abnormal Destination Port Detected -->
 <rule id="102503" level="10">
   <if_group>sysmon_event3</if_group>
-  <list field="win.eventdata.destinationPort" lookup="not_address_match_key">etc/lists/common-ports</list>
-  <description>Sysmon - Event 3: Network connection to Uncommon Port by $(win.eventdata.image)</description>
+  <description>Sysmon - Event 3: Network connection by $(win.eventdata.image)</description>
   <options>no_full_log</options>
   <group>sysmon_event3,</group>
 </rule>
@@ -457,48 +451,6 @@
     <description>Sysmon Rules Reloaded</description>
     <options>no_full_log</options>
   </rule>
-<!-- Modify it at your will. -->
-<group name="windows,sysmon,">
-<!-- Sysmon - Event 22: DNS Request by $(win.eventdata.image) -->
-<rule id="121101" level="3">
-<description>Sysmon - Event 22: DNS Request by $(win.eventdata.image)</description>
-<mitre>
-<id>T1071</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event_22,</group>
-</rule>
 
-<!-- Rule ID 121101 Override if Hostname = AlienVault -->
-<rule id="121102" level="1">
-<if_sid>121101</if_sid>
-<field name="win.eventdata.queryName">^otx\.alienvault\.com$</field>
-<description>Sysmon - Event 22: DNS Request by $(win.eventdata.image)</description>
-<mitre>
-<id>T1071</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event_22,</group>
-</rule> 
-
-<!-- Rule ID 121101 Override if Hostname = Local Hostnames -->
-<rule id="121103" level="1">
-<if_sid>121101</if_sid>
-<field name="win.eventdata.queryName">myorg\.org$</field>
-<description>Sysmon - Event 22: DNS Request by $(win.eventdata.image)</description>
-<mitre>
-<id>T1071</id>
-</mitre>
-<options>no_full_log</options>
-<group>sysmon_event_22,</group>
-</rule>
-<rule frequency="2" id="102502" level="1" timeframe="60">
-		<if_matched_group>sysmon_event22</if_matched_group>
-		<same_field>data.win.eventdata.queryName</same_field>
-		<description>Multiple Sysmon Level 22 alerts for same destination IP.</description>
-		<options>no_full_log</options>
-	</rule>
-
-</group>
 	
 </group>
