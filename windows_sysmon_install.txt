@@ -1,0 +1,3 @@
+sysmon -accepteula -i c:\windows\config.xml
+
+sysmon -u force
