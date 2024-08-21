@@ -12,7 +12,7 @@
 <var name="MS_FREQ">8</var>
 
 <group name="windows,sysmon,">
-  <rule id="61600" level="3" overwrite="yes">
+  <rule id="61600" level="2" overwrite="yes">
     <if_sid>60004</if_sid>
     <field name="win.system.severityValue">^INFORMATION$</field>
     <description>Windows Sysmon informational event</description>
