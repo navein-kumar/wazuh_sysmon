@@ -1,4 +1,5 @@
 <!-- Modify it at your will. -->
+<!-- Modify it at your will. -->
 <!--
  - Sysmo For Linux rules
  - Created by SOCFortress.
@@ -15,23 +16,23 @@
         </mitre>
         <options>no_full_log</options>
     </rule>
-<!--EventID = 1
+<!--EventID = 1-->
     <rule id="200151" level="3">
         <if_sid>200150</if_sid>
         <field name="system.eventId">^1$</field>
         <description>Sysmon - Event 1: Process creation $(eventdata.image)</description>
-        <group>sysmon_event1</group>
+        <group>linuxsysmon_event1</group>
         <mitre>
          <id>T1204</id>
         </mitre>
         <options>no_full_log</options>
-    </rule>-->
+    </rule>
 <!--EventID = 3-->
     <rule id="200152" level="3">
         <if_sid>200150</if_sid>
         <field name="system.eventId">^3$</field>
         <description>Sysmon - Event 3: Network connection by $(eventdata.image)</description>
-        <group>sysmon_event3</group>
+        <group>linuxsysmon_event3</group>
         <mitre>
          <id>T1204</id>
         </mitre>
@@ -53,7 +54,7 @@
         <if_sid>200150</if_sid>
         <field name="system.eventId">^9$</field>
         <description>Sysmon - Event 9: Raw Access Read by $(eventdata.image)</description>
-        <group>sysmon_event9</group>
+        <group>liuxsysmon_event9</group>
         <mitre>
          <id>T1204</id>
         </mitre>
@@ -64,7 +65,7 @@ EventID = 11
         <if_sid>200150</if_sid>
         <field name="system.eventId">^11$</field>
         <description>Sysmon - Event 11: FileCreate by $(eventdata.image)</description>
-	      <group>sysmon_event_11</group>
+	      <group>linuxsysmon_event_11</group>
         <mitre>
          <id>T1044</id>
         </mitre>
@@ -75,7 +76,7 @@ EventID = 11
         <if_sid>200150</if_sid>
         <field name="system.eventId">^16$</field>
         <description>Sysmon - Event 16: Sysmon config state changed $(Event.EventData.Data.Configuration)</description>
-        <group>sysmon_event_16</group>
+        <group>linuxsysmon_event_16</group>
         <mitre>
          <id>T1562</id>
         </mitre>
@@ -83,12 +84,12 @@ EventID = 11
     </rule> -->
 
 
-<!-- Frequency rule to capture 2 sysmon event 3 alerts within of the same destination ip within 5 seconds 
+<!-- Frequency rule to capture 2 sysmon event 3 alerts within of the same destination ip within 5 seconds -->
 <rule frequency="2" id="200203" level="1" timeframe="60">
 		<if_matched_sid>200152</if_matched_sid>
 		<same_field>eventdata.DestinationIp</same_field>
 		<description>Multiple Sysmon Level 3 alerts for same destination IP.</description>
 		<options>no_full_log</options>
-	</rule> -->
+	</rule> 
 
 </group>
