@@ -1,3 +1,4 @@
+<!-- Modify it at your will. -->
 <!--
   -  Windows Event Channel ruleset for the Sysmon channel 
   -  Created by Wazuh, Inc.
@@ -465,5 +466,11 @@
     <description>Multiple Sysmon error events</description>
     <options>no_full_log</options>
   </rule>
-
+<rule frequency="2" id="200303" level="1" timeframe="60">
+		<if_matched_sid>61605</if_matched_sid>
+		<same_field>win.eventdata.image</same_field>
+		<same_field>win.eventdata.destinationIp</same_field>
+		<description>Multiple Sysmon Level 3 alerts for same destination IP.</description>
+		<options>no_full_log</options>
+	</rule> 
 </group>
