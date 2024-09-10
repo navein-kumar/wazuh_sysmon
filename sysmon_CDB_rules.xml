@@ -1,0 +1,78 @@
+<!-- Windows Sysmon CTI. -->
+<group name="sysmon_event1,sysmon,windows,">
+
+<rule id="100502" level="10">
+  <if_group>sysmon_event1</if_group>
+  <list field="win.eventdata.hashes" lookup="address_match_key">etc/lists/blocklist-hash</list>
+  <description>SymonCTI - Malware indentifed in Virushare $(win.eventdata.image)</description>
+  <group>blocklist,virushare,</group>
+  <options>no_full_log</options>
+</rule>
+<rule id="100503" level="10">
+  <if_group>sysmon_event3</if_group>
+  <list field="win.eventdata.destinationIp" lookup="address_match_key">etc/lists/blocklist-ip</list>
+  <description>SymonCTI - IP blacklisted in Alien Valut $(win.eventdata.destinationIp)</description>
+  <group>blocklist,virushare,</group>
+  <options>no_full_log</options>
+</rule>
+<rule id="100504" level="10">
+  <if_group>sysmon_event3</if_group>
+  <list field="win.eventdata.sourceIp" lookup="address_match_key">etc/lists/blocklist-ip</list>
+  <description>SymonCTI - IP blacklisted in Alien Valut $(win.eventdata.destinationIp)</description>
+  <group>blocklist,virushare,</group>
+  <options>no_full_log</options>
+</rule>
+<rule id="100505" level="10">
+  <if_group>sysmon_event_22</if_group>
+  <list field="win.eventdata.queryName" lookup="address_match_key">etc/lists/blocklist-domain</list>
+  <description>SymonCTI - Domain blacklisted in Alien Valut $(win.eventdata.queryName)</description>
+  <group>blocklist,virushare,</group>
+  <options>no_full_log</options>
+</rule>
+</group>
+
+<!-- Linux Sysmon CTI. -->
+<group name="sysmon,linux,">
+<rule id="100506" level="10">
+  <if_group>linuxsysmon_event1</if_group>
+  <list field="eventdata.hashes" lookup="address_match_key">etc/lists/blocklist-hash1</list>
+  <description>LinuxSymonCTI - Malware indentifed in Virushare $(win.eventdata.image)</description>
+  <group>blocklist,virushare,</group>
+  <options>no_full_log</options>
+</rule>
+<rule id="100507" level="10">
+  <if_group>linuxsysmon_event3</if_group>
+  <list field="eventdata.DestinationIp" lookup="address_match_key">etc/lists/blocklist-ip</list>
+  <description>LinuxSymonCTI - IP blacklisted in Alien Valut $(eventdata.DestinationIp)</description>
+  <group>blocklist,virushare,</group>
+  <options>no_full_log</options>
+</rule>
+<rule id="100508" level="10">
+  <if_group>linuxsysmon_event3</if_group>
+  <list field="eventdata.sourceIp" lookup="address_match_key">etc/lists/blocklist-ip</list>
+  <description>LinuxSymonCTI - IP blacklisted in Alien Valut $(eventdata.sourceIp)</description>
+  <group>blocklist,virushare,</group>
+  <options>no_full_log</options>
+</rule>
+</group>
+<!-- Linux SSH CTI. -->
+
+<group name="local,syslog,sshd,">
+
+<rule id="100509" level="10">
+  <if_group>sshd</if_group>
+  <list field="srcip" lookup="address_match_key">etc/lists/blocklist-ip</list>
+  <description>SshCTI - IP blacklisted in Alien Valut $(srcip) </description>
+  <group>blocklist,alienvallut,</group>
+  <options>no_full_log</options>
+</rule>
+
+<rule id="100510" level="10">
+  <if_group>syslog</if_group>
+  <list field="srcip" lookup="address_match_key">etc/lists/blocklist-ip</list>
+  <description>SshCTI - IP blacklisted in Alien Valut $(srcip) </description>
+  <group>blocklist,alienvallut,</group>
+  <options>no_full_log</options>
+</rule>
+
+</group>
